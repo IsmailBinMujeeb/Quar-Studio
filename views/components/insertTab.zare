@@ -1,0 +1,8 @@
+link insertTabCss "/styles/insertTab"
+import insertTabJs "/scripts/insertTab"
+
+serve (
+    <div class="insert-tab">
+
+    </div>
+)

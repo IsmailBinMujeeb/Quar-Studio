@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    display: flex;
+    background: var(--bg-color);
+    color: #E0E0E0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 15vw;
+    background: #282b30;
+    border-right: 1px solid var(--muted-color);
+    height: 100vh;
+}
+
+.sidebar-header {
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1e2124;
+    padding: 10px;
+    border-bottom: 1px solid var(--muted-color);
+}
+
+.sidebar-header .btn {
+    color: #E0E0E0;
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    padding: 0 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+
+    &:hover {
+        background: #2E3A59;
+    }
+}
+
+.model-wrapper {
+    padding: 10px;
+}
+
+.model {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #E0E0E0;
+
+    &:hover {
+        background: #2E3A59;
+    }
+}
+
+.model span {
+    color: var(--muted-color);
+}
+
+.main {
+    margin-left: auto;
+    height: 100vh;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid var(--muted-color);
+    background: #1e2124;
+}
+
+.tab {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    color: var(--muted-color);
+    border-left: 1px solid var(--muted-color);
+    border-right: 1px solid var(--muted-color);
+    position: relative;
+    margin: 1px 0;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+        color: white;
+    }
+}
+
+
+.tab.active {
+    color: white;
+    background-color: #2E3A59;
+}
+
+.tab .close {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.operations {
+    display: flex;
+    background: #1e2124;
+    align-items: center;
+    padding: 8px 5px;
+    gap: 10px;
+}
+
+.operations .btn {
+    background: var(--muted-color);
+    color: #E0E0E0;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+
+    &:hover {
+        background: #2E3A59;
+    }
+}
+
+.operations .btn:disabled {
+    background-color: #3a3f4b;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.operations .limit-wrapper,
+.count-wrapper,
+.page-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 2px 5px;
+    gap: 5px;
+    border-radius: 5px;
+    background-color: var(--muted-color);
+    cursor: pointer;
+
+    &:hover {
+        background: #2E3A59;
+    }
+}
+
+.operations .limit-wrapper:hover #limit {
+    background: #2E3A59;
+}
+
+.operations .text {
+    padding: 2px 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.operations .limit-div,
+.count-div,
+.page-div {
+    width: fit-content;
+    border-left: 2px solid #424549;
+    height: 100%;
+    color: #E0E0E0;
+}
+
+.operations .count-div,
+.page-div {
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.operations .limit-wrapper #limit {
+    background-color: var(--muted-color);
+    border: none;
+    color: #E0E0E0;
+    padding: 2px 5px;
+    width: fit-content;
+    height: 100%;
+    font-size: 12px;
+
+    &:hover {
+        background: #2E3A59;
+    }
+}
+
+.content {
+    padding: 10px;
+    flex: 1;
+    border-top: 1px solid var(--muted-color);
+    background: #23272a;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+summary::marker{
+    color: var(--muted-color);
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+.document {
+    padding: 10px;
+    border: 1px solid var(--muted-color);
+    background: #1e2124;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.field {
+    padding: 5px 20px;
+
+}
+
+.field .string {
+    color: var(--green-color);
+}
+
+.field .string::after {
+    content: '"';
+    color: var(--green-color);
+}
+
+.field .string::before {
+    content: '"';
+    color: var(--green-color);
+}
+
+.field .number {
+    color: var(--blue-color);
+}
+
+.field .ObjectId {
+    color: var(--red-color);
+}
+
+.field .ObjectId::after {
+    content: ' )';
+    color: var(--red-color);
+}
+
+.field .ObjectId::before {
+    content: 'ObjectId( ';
+    color: var(--red-color);
+}
+
+.json-data {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    background: #1e2124;
+    border: none;
+    color: #E0E0E0;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.document-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.document-actions .updateDocument {
+    background: transparent;
+    color: #E0E0E0;
+    border: none;
+    padding: 5px 10px;
+    border: 1px solid var(--muted-color);
+    border-radius: 5px;
+    transition: background 0.1s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--green-color);
+        color: var(--bg-color);
+    }
+}
+
+.document-actions .deleteDocument {
+    background: transparent;
+    color: #E0E0E0;
+    border: none;
+    padding: 5px 10px;
+    border: 1px solid var(--muted-color);
+    border-radius: 5px;
+    transition: background 0.1s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--red-color);
+        color: var(--bg-color);
+    }
+}
+
+.top-container {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    padding:  0 10px;
+}
+
+.top-container .editDocument {
+    background: transparent;
+    color: #E0E0E0;
+    border: none;
+    padding: 5px 10px;
+    border: 1px solid var(--muted-color);
+    border-radius: 5px;
+    transition: background 0.1s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--blue-color);
+        color: var(--bg-color);
+    }
+}

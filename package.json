@@ -1,0 +1,23 @@
+{
+  "name": "quar",
+  "version": "1.2.1",
+  "description": "This will load all Mongoose models from the folder and start a local web UI to Create, view, update, and delete documents.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "quar": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "@IsmailBinMujeeb (IsmailBinMujeeb@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "express": "^5.1.0",
+    "minimist": "^1.2.8",
+    "mongoose": "^8.14.1",
+    "open": "^10.1.2",
+    "zare": "^2.1.1"
+  }
+}

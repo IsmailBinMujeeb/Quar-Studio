@@ -1,0 +1,55 @@
+as Base import "../base.zare"
+
+as Popup import "../components/popup.zare"
+as InsertTab import "../components/insertTab.zare"\
+
+link styleCss "/styles/style"
+import mainJs "/scripts/main"
+
+serve (
+    <Base>
+        <div class="sidebar">
+            <div class="sidebar-header">All Models <button onclick="refreshSideBar()" class="btn">⭮</button></div>
+            <div class="model-wrapper">
+                @each (models:model) {
+                    <div class="model" onclick="openModel('@(model.name)')">@(model.name)<span id="@(model.name)-doc-count">@(model.count)</span></div>
+                }
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="tabs" id="tabs">
+                <div class="tab" id="tab-quar-studio"><img src="/assets/icon.png" alt="uv dex icon" width="24px"/></div>
+            </div>
+            <div class="operations">
+                <button class="refreshModel btn" onclick="loadDocuments()">⭮</button>
+                <div class="limit-wrapper">
+                    <div class="text">Limit</div><div class="limit-div">
+                        <select name="limit" id="limit" onchange="loadDocuments()">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100" selected>100</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="count-wrapper">
+                    <div class="text">Count</div>
+                    <div class="count-div" id="document-count">0</div>
+                </div>
+                <button class="btn" id="previous-page" onclick="gotoPreviousPage()">Previous</button>
+                <div class="page-wrapper" id="page" data-page="1">
+                    <div class="text">Page</div>
+                    <div class="page-div" id="page-value">1</div>
+                </div>
+                <button class="btn" id="next-page" onclick="gotoNextPage()">Next</button>
+                <button class="btn" onclick="toggleInsertTab()">Add Record</button>
+                <button class="btn" onclick="deleteAllDocs()">🗑</button>
+            </div>
+            <div class="content" id="content"></div>
+        </div>
+
+        <Popup/>
+        <InsertTab />
+    </Base>
+)

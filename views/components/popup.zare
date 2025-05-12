@@ -1,0 +1,12 @@
+link popupCss "/styles/popup"
+import popupJs "/scripts/popup"
+
+serve (
+    <div class="popup-overlay" id="popup">
+        <div class="popup-box" id="popupBox">
+            <h2 id="popupTitle">Title</h2>
+            <p id="popupMessage">Message goes here.</p>
+            <button class="close-btn" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+)

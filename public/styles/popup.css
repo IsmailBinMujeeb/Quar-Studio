@@ -1,0 +1,71 @@
+@import './variables.css';
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-box {
+    background: var(--bg-color);
+    padding: 20px 25px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.4s ease;
+    position: relative;
+}
+
+.popup-box h2 {
+    margin-top: 0;
+    color: var(--red-color);
+}
+
+.popup-box.warning h2 {
+    color: var(--yellow-color);
+}
+
+.popup-box.info h2 {
+    color: var(--green-color);
+}
+
+.popup-box p {
+    margin: 10px 0 20px;
+}
+
+.close-btn {
+    background: var(--red-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-box.warning .close-btn {
+    background: var(--yellow-color);
+}
+
+.popup-box.info .close-btn {
+    background: var(--green-color);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
