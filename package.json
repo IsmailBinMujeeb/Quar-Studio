@@ -8,7 +8,8 @@
     "quar": "./index.js"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "node .\\index.js --model .\\models\\ --db shopDB"
   },
   "author": "@IsmailBinMujeeb (IsmailBinMujeeb@gmail.com)",
   "license": "MIT",
