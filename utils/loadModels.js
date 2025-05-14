@@ -22,4 +22,6 @@ export default (modelPath) => {
             await import(moduleUrl.href);
         }
     });
+
+    console.log(chalk.blue.bold('[INFO]'), chalk.gray("Models loaded from: " + modelPath))
 }
