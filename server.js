@@ -108,6 +108,7 @@ app.get("/schema/:modelName", async (req, res) => {
             }
         }
         getSchema(paths)
+
         res.status(200).json(schema);
     } catch (error) {
         res.status(500).json({ error: error.message || "Intenral Server Error" })
