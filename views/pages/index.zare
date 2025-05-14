@@ -37,12 +37,12 @@ serve (
                     <div class="text">Count</div>
                     <div class="count-div" id="document-count">0</div>
                 </div>
-                <button class="btn" id="previous-page" onclick="gotoPreviousPage()">Previous</button>
+                <button class="btn" id="previous-page" onclick="gotoPreviousPage()" disabled>Previous</button>
                 <div class="page-wrapper" id="page" data-page="1">
                     <div class="text">Page</div>
                     <div class="page-div" id="page-value">1</div>
                 </div>
-                <button class="btn" id="next-page" onclick="gotoNextPage()">Next</button>
+                <button class="btn" id="next-page" onclick="gotoNextPage()" disabled>Next</button>
                 <button class="btn" onclick="toggleInsertTab()">Add Record</button>
                 <button class="btn" onclick="deleteAllDocs()">🗑</button>
             </div>
