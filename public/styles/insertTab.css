@@ -31,13 +31,30 @@
     color: var(--text-color);
 }
 
-#insert-form input, select {
+#insert-form input,
+select,
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid var(--muted-color);
     border-radius: 5px;
     background-color: var(--bg-color);
     color: var(--text-color);
+}
+
+#insert-form textarea {
+    resize: vertical;
+    min-height: fit-content;
+}
+
+#insert-form input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--green-color);
+    background-color: var(--bg-color);
+    border: 1px solid var(--muted-color);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #insert-form .btn {

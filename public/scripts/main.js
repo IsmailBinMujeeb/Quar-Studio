@@ -35,6 +35,8 @@ async function activateTab(modelName) {
 
     content.dataset.modelName = modelName;
     document.getElementById("page-value").innerText = 1;
+    document.querySelectorAll(".operations .btn")?.forEach( btn => btn.disabled = false )
+    document.querySelector(".operations select").disabled = false;
 
     const insertTab = document.querySelector('.insert-tab');
     insertTab.classList.remove('active');
@@ -62,7 +64,16 @@ function closeTab(event, modelName) {
         const keys = Object.keys(openTabs);
         const modelName = keys[keys.length - 1] || null;
         if (modelName) activateTab(modelName);
+        else disableAllOptions();
     }
+}
+
+function disableAllOptions() {
+    content.dataset.modelName = '';
+
+    document.querySelectorAll(".operations .btn")?.forEach( btn => btn.disabled = true );
+    document.getElementById("document-count").innerText = 0;
+    document.querySelector(".operations select").disabled = true;
 }
 
 async function loadDocuments() {
@@ -267,6 +278,7 @@ async function deleteDoc(modelName, id) {
         openModel(modelName);
         const data = await res.json();
         document.getElementById(`${modelName}-doc-count`).innerText = data.count || 0;
+        loadDocuments()
     } else {
         showModal('error', 'Delete Failed', await res.json().error || 'Delete failed, please try again.');
     }
