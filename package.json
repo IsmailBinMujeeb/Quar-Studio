@@ -1,6 +1,6 @@
 {
   "name": "quar",
-  "version": "1.2.1",
+  "version": "1.2.4",
   "description": "This will load all Mongoose models from the folder and start a local web UI to Create, view, update, and delete documents.",
   "main": "index.js",
   "type": "module",
@@ -20,5 +20,13 @@
     "mongoose": "^8.14.1",
     "open": "^10.1.2",
     "zare": "^2.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IsmailBinMujeeb/quar-studio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IsmailBinMujeeb/quar-studio/issues"
+  },
+  "homepage": "https://github.com/IsmailBinMujeeb/quar-studio#readme"
 }
