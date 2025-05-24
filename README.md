@@ -1,7 +1,7 @@
 # Quar Studio – Quick UI for Mongoose Models
 
 <p align="center">
-    <img src="./public/assets/icon.png" alt="logo" width="200px"/>
+    <img src="./assets/icon.png" alt="logo" width="200px"/>
 </p>
 
 Instantly spin up a web-based editor for your Mongoose models.

@@ -19,7 +19,7 @@ serve (
 
         <div class="main">
             <div class="tabs" id="tabs">
-                <div class="tab" id="tab-quar-studio"><img src="/assets/icon.png" alt="uv dex icon" width="24px"/></div>
+                <div class="tab" id="tab-quar-studio"><img src="/images/icon.png" alt="uv dex icon" width="24px"/></div>
             </div>
             <div class="operations">
                 <button class="refreshModel btn" onclick="loadDocuments()">⭮</button>
