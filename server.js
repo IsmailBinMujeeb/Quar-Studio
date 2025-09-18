@@ -42,7 +42,7 @@ app.get("/models", async (_, res) => {
         loadModels(app.locals.modelPath)
         const modelNames = mongoose.modelNames();
         modelNames.sort((a, b) => a.localeCompare(b));
-    
+
         const result = await Promise.all(
             modelNames.map(async name => {
                 const model = mongoose.model(name);
@@ -50,7 +50,7 @@ app.get("/models", async (_, res) => {
                 return { name, count };
             })
         );
-    
+
         res.status(200).json({ models: result });
     } catch (error) {
         res.status(500).json({ error: error.message || "Internal server error" });
@@ -138,56 +138,56 @@ app.post("/insert/:modelName", async (req, res) => {
     try {
         const { modelName } = req.params;
         const body = req.body;
-    
+
         const Model = mongoose.model(modelName);
-    
+
         if (!Model) return res.status(404).json({ error: "model not found" });
-    
+
         const paths = Model.schema.paths;
-    
+
         function getSchema(paths) {
-    
+
             let schema = {};
             for (const path in paths) {
-    
+
                 if (path === '_id' || path === '__v') continue;
-    
+
                 if (paths[path].instance === 'Embedded') {
                     schema[path] = getSchema(paths[path].schema.paths);
                     continue;
                 };
-    
+
                 schema[path] = paths[path].instance;
             }
-    
+
             return schema;
         }
-    
+
         const schema = getSchema(paths)
-    
+
         function getData(body, schema) {
-    
+
             let data = {};
-            
+
             for (const key in schema) {
                 if (typeof schema[key] === 'object' && schema[key] !== null) {
-                    
+
                     data[key] = getData(body, schema[key]);
                     continue;
                 }
-    
+
                 if (Object.keys(body).includes(key)) {
                     data[key] = body[key];
                 }
             }
-    
+
             return data;
         }
-    
+
         const data = getData(body, schema)
-        
+
         const result = await Model.create(data)
-    
+
         res.status(200).json(result)
     } catch (error) {
         res.status(500).json({ error: error.message || "Internal server error" })
@@ -199,7 +199,7 @@ app.put("/update/:modelName/:id", async (req, res) => {
         const { modelName, id } = req.params;
         const model = mongoose.model(modelName);
         const updatedDoc = req.body;
-        
+
         delete updatedDoc._id;
         const result = await model.findByIdAndUpdate(id, updatedDoc, { new: true });
 

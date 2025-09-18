@@ -1,4 +1,4 @@
-import keyboardShortcutsJs "/scripts/keyboardCommands"
+import "/scripts/keyboardCommands"
 
 serve (
     <!DOCTYPE html>

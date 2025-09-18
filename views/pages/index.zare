@@ -3,8 +3,8 @@ as Base import "../base.zare"
 as Popup import "../components/popup.zare"
 as InsertTab import "../components/insertTab.zare"\
 
-link styleCss "/styles/style"
-import mainJs "/scripts/main"
+link "/styles/style"
+import "/scripts/main"
 
 serve (
     <Base>

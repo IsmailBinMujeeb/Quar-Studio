@@ -35,7 +35,7 @@ async function activateTab(modelName) {
 
     content.dataset.modelName = modelName;
     document.getElementById("page-value").innerText = 1;
-    document.querySelectorAll(".operations .btn")?.forEach( btn => btn.disabled = false )
+    document.querySelectorAll(".operations .btn")?.forEach(btn => btn.disabled = false)
     document.querySelector(".operations select").disabled = false;
 
     const insertTab = document.querySelector('.insert-tab');
@@ -71,7 +71,7 @@ function closeTab(event, modelName) {
 function disableAllOptions() {
     content.dataset.modelName = '';
 
-    document.querySelectorAll(".operations .btn")?.forEach( btn => btn.disabled = true );
+    document.querySelectorAll(".operations .btn")?.forEach(btn => btn.disabled = true);
     document.getElementById("document-count").innerText = 0;
     document.querySelector(".operations select").disabled = true;
 }

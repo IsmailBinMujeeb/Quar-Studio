@@ -51,7 +51,7 @@ try {
     (async () => {
 
         await mongoose.connect(`${args.uri || "mongodb://localhost:27017/"}${args.db}`)
-        console.log( chalk.blue.bold('[INFO]'), chalk.gray("Quar: Database connection established"))
+        console.log(chalk.blue.bold('[INFO]'), chalk.gray("Quar: Database connection established"))
 
         app.listen(app.get('port'), () => {
             const url = `http://127.0.0.1:${app.get('port')}`;

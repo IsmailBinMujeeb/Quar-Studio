@@ -1,5 +1,5 @@
-link popupCss "/styles/popup"
-import popupJs "/scripts/popup"
+link "/styles/popup"
+import "/scripts/popup"
 
 serve (
     <div class="popup-overlay" id="popup">

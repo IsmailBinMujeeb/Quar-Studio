@@ -19,7 +19,7 @@
     "minimist": "^1.2.8",
     "mongoose": "^8.14.1",
     "open": "^10.1.2",
-    "zare": "^2.1.1"
+    "zare": "2.6.0"
   },
   "repository": {
     "type": "git",

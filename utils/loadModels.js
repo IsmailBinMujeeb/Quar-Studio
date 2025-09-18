@@ -8,13 +8,13 @@ export default (modelPath) => {
     if (!fs.existsSync(modelPath)) {
         console.log(
             chalk.red.bold('[ERROR]') +
-                ' The specified model path does not exist:\n  ' +
-                chalk.gray(modelPath)
+            ' The specified model path does not exist:\n  ' +
+            chalk.gray(modelPath)
         );
         console.log('Tip: Check the path or create the folder first.');
         process.exit(1);
     }
-    
+
     fs.readdirSync(modelPath).forEach(async (file) => {
         if (file.endsWith('.js')) {
             const filePath = path.join(modelPath, file);

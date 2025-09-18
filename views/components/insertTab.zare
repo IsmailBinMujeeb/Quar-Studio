@@ -1,5 +1,5 @@
-link insertTabCss "/styles/insertTab"
-import insertTabJs "/scripts/insertTab"
+link "/styles/insertTab"
+import "/scripts/insertTab"
 
 serve (
     <div class="insert-tab">
