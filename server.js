@@ -71,6 +71,7 @@ app.get("/models/:modelName", async (req, res) => {
 
         res.status(200).json({ documents, schema: modelSchema, totalCount, count, totalPages });
     } catch (error) {
+        console.log(error)
         res.status(500).json({ error: error.message || "Internal server error" });
     }
 });

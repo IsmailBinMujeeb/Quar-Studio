@@ -1,7 +1,7 @@
 as Base import "../base.zare"
 
 as Popup import "../components/popup.zare"
-as InsertTab import "../components/insertTab.zare"\
+as InsertTab import "../components/insertTab.zare"
 
 link "/styles/style"
 import "/scripts/main"

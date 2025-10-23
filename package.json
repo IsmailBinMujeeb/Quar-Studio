@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "node .\\index.js --model .\\models\\ --db shopDB"
+    "dev": "node index.js --model ./dummy_models --db quarDB"
   },
   "author": "@IsmailBinMujeeb (IsmailBinMujeeb@gmail.com)",
   "license": "MIT",

@@ -56,7 +56,7 @@ try {
         app.listen(app.get('port'), () => {
             const url = `http://127.0.0.1:${app.get('port')}`;
             console.log(chalk.green.bold('[SUCCESS]') + chalk.gray(` Server is running on ${chalk.underline(url)}`));
-            open(url);
+            if (args.open) open(url);
         });
     })();
 } catch (err) {
