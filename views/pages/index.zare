@@ -1,22 +1,15 @@
-as Base import "../base.zare"
+as Base import "../base"
 
-as Popup import "../components/popup.zare"
-as InsertTab import "../components/insertTab.zare"
+as Sidebar import "../components/sidebar"
+as Popup import "../components/popup"
+as InsertTab import "../components/insertTab"
 
 link "/styles/style"
 import "/scripts/main"
 
 serve (
     <Base>
-        <div class="sidebar">
-            <div class="sidebar-header">All Models <button onclick="refreshSideBar()" class="btn">⭮</button></div>
-            <div class="model-wrapper">
-                @each (models:model) {
-                    <div class="model" onclick="openModel('@(model.name)')">@(model.name)<span id="@(model.name)-doc-count">@(model.count)</span></div>
-                }
-            </div>
-        </div>
-
+        <Sidebar></Sidebar>
         <div class="main">
             <div class="tabs" id="tabs">
                 <div class="tab" id="tab-quar-studio"><img src="/images/icon.png" alt="uv dex icon" width="24px"/></div>

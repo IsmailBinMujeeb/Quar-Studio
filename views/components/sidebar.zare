@@ -1,0 +1,12 @@
+link "/styles/sidebar"
+
+serve (
+    <div class="sidebar">
+        <div class="sidebar-header">All Models <button onclick="refreshSideBar()" class="btn">⭮</button></div>
+        <div class="model-wrapper">
+            @each (models:model) {
+                <div class="model" onclick="openModel('@(model.name)')">@(model.name)<span id="@(model.name)-doc-count">@(model.count)</span></div>
+            }
+        </div>
+    </div>
+)

@@ -14,41 +14,6 @@ body {
     color: #E0E0E0;
 }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    width: 15vw;
-    background: #282b30;
-    border-right: 1px solid var(--muted-color);
-    height: 100vh;
-}
-
-.sidebar-header {
-    font-size: 13px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #1e2124;
-    padding: 10px;
-    border-bottom: 1px solid var(--muted-color);
-}
-
-.sidebar-header .btn {
-    color: #E0E0E0;
-    background-color: transparent;
-    border: none;
-    font-size: 12px;
-    padding: 0 4px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.1s ease-in-out;
-
-    &:hover {
-        background: #2E3A59;
-    }
-}
-
 .model-wrapper {
     padding: 10px;
 }
@@ -217,7 +182,7 @@ body {
     display: none;
 }
 
-summary::marker{
+summary::marker {
     color: var(--muted-color);
     font-size: 10px;
     margin-right: 10px;
@@ -322,7 +287,7 @@ summary::marker{
     display: flex;
     justify-content: left;
     width: 100%;
-    padding:  0 10px;
+    padding: 0 10px;
 }
 
 .top-container .editDocument {
