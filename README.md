@@ -91,3 +91,5 @@ export default mongoose.model("Post", postSchema);
 
 ## Contribute
 Pull requests, suggestions, and ideas are welcome!
+
+***Icon: <a href="https://www.flaticon.com/free-icons/otter" title="otter icons">Otter icons created by William Richon - Flaticon</a>***
