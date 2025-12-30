@@ -9,8 +9,9 @@ Built for developers who loves quick database interaction!
 
 ## Install & Run
 ```bash
-npx quar --model <path-to-model-folder> --db <db-name>
+npx quar
 ```
+It will ask you for model folder path, database name and database URI (optional).
 This will load all Mongoose models from the folder and start a local web UI to Create, view, update, and delete documents.
 
 ## What it does

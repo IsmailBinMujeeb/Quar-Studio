@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "node index.js --model ./dummy_models --db quarDB"
+    "dev": "node index.js --model ./dummy_models --db quarDB",
+    "changeset": "changeset"
   },
   "author": "@IsmailBinMujeeb (IsmailBinMujeeb@gmail.com)",
   "license": "MIT",
@@ -29,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/IsmailBinMujeeb/quar-studio/issues"
   },
-  "homepage": "https://github.com/IsmailBinMujeeb/quar-studio#readme"
+  "homepage": "https://github.com/IsmailBinMujeeb/quar-studio#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.8"
+  }
 }
