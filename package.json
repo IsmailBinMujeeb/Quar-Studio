@@ -12,6 +12,9 @@
     "dev": "node index.js --model ./dummy_models --db quarDB",
     "changeset": "changeset"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "@IsmailBinMujeeb (IsmailBinMujeeb@gmail.com)",
   "license": "MIT",
   "dependencies": {
