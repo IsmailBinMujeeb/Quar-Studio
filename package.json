@@ -1,6 +1,6 @@
 {
   "name": "quar",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "This will load all Mongoose models from the folder and start a local web UI to Create, view, update, and delete documents.",
   "main": "index.js",
   "type": "module",
