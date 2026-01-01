@@ -1,5 +1,11 @@
 # quar
 
+## 2.0.0
+
+### Major Changes
+
+- f1d451f: Update to mongoose v9
+
 ## 1.4.2
 
 ### Patch Changes
