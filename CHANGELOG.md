@@ -1,5 +1,11 @@
 # quar
 
+## 2.0.1
+
+### Patch Changes
+
+- 6036aa0: move mongoose to peer dependencies
+
 ## 2.0.0
 
 ### Major Changes
