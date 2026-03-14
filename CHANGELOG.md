@@ -1,5 +1,12 @@
 # quar
 
+## 2.1.0
+
+### Minor Changes
+
+- de7986b: add sub schema support
+- 15bd5a4: add typescript support
+
 ## 2.0.1
 
 ### Patch Changes
